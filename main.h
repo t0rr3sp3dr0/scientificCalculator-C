@@ -1,0 +1,8 @@
+//
+// Created by Pedro Tôrres on 8/4/16.
+//
+
+#ifndef SCIENTIFIC_CALCULATOR_MAIN_H
+#define SCIENTIFIC_CALCULATOR_MAIN_H
+
+#endif //SCIENTIFIC_CALCULATOR_MAIN_H
