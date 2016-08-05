@@ -23,6 +23,6 @@ void fraction_devide(fraction *x, fraction y);
 
 void fraction_power(fraction *f, double power);
 
-char *complex_string(fraction *f);
+char *fraction_string(fraction *f);
 
 #endif //SCIENTIFIC_CALCULATOR_FRACTION_H

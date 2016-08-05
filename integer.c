@@ -17,7 +17,7 @@ void integer_multiply(int *x, int y) {
     *x *= y;
 }
 
-void integer_devide(int *x, int y) {
+void integer_divide(int *x, int y) {
     *x /= y;
 }
 

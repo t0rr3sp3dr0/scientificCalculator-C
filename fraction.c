@@ -45,10 +45,10 @@ void fraction_power(fraction *f, double power) {
     f->denominator = pow(f->denominator, power);
 }
 
-char *complex_string(fraction *f) {
+char *fraction_string(fraction *f) {
     int decimal, sign;
-    char *numerator = ecvt(f->numerator, INT_MAX, decimal, sign);
-    char *denominator = ecvt(f->denominator, INT_MAX, decimal, sign);
+    char *numerator = ecvt(f->numerator, INT_MAX, &decimal, &sign);
+    char *denominator = ecvt(f->denominator, INT_MAX, &decimal, &sign);
     char *out = (char *) malloc((strlen(numerator) + strlen(denominator) + 3 + 1) * sizeof(char));
     sprintf(out, "%s / %s", numerator, denominator);
     return out;

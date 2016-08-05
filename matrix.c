@@ -29,7 +29,7 @@ void matrix_add(matrix *x, matrix y) {
 }
 
 int matrix_can_subtract(matrix x, matrix y) {
-    matrix_can_add(x, y);
+    return matrix_can_add(x, y);
 }
 
 void matrix_subtract(matrix *x, matrix y) {
@@ -41,7 +41,7 @@ void matrix_subtract(matrix *x, matrix y) {
 }
 
 int matrix_can_multiply(matrix x, matrix y) {
-    return x.m == y.n && x.n == y.m;
+    return x.n == y.m;
 }
 
 void matrix_multiply(matrix *x, matrix y) {
@@ -50,8 +50,7 @@ void matrix_multiply(matrix *x, matrix y) {
         for (int j = 0; j < y.n; j++) {
             m.table[i][j] = 0;
             for (int k = 0; k < x->n; k++)
-                for (int l = 0; l < y.m; l++)
-                    m.table[i][j] += x->table[i][k] * y.table[j][l];
+                m.table[i][j] += x->table[i][k] * y.table[k][j];
         }
     x->table = m.table;
 }

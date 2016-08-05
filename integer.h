@@ -11,7 +11,7 @@ void integer_subtract(int *x, int y);
 
 void integer_multiply(int *x, int y);
 
-void integer_devide(int *x, int y);
+void integer_divide(int *x, int y);
 
 void integer_power(int *i, double power);
 
