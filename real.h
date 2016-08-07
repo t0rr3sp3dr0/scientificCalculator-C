@@ -11,7 +11,7 @@ void real_subtract(double *i, double j);
 
 void real_multiply(double *i, double j);
 
-void real_devide(double *i, double j);
+void real_divide(double *i, double j);
 
 void real_power(double *f, double power);
 

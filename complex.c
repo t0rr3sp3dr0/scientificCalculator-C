@@ -24,7 +24,7 @@ void complex_multiply(double complex *x, double complex y) {
     *x *= y;
 }
 
-void complex_devide(double complex *x, double complex y) {
+void complex_divide(double complex *x, double complex y) {
     *x /= y;
 }
 
@@ -32,8 +32,8 @@ void complex_power(double complex *c, double power) {
     *c = cpow(*c, power);
 }
 
-char *complex_string(double complex *c) {
+char *complex_string(double complex c) {
     char *out = (char *) malloc(CHAR_MAX * sizeof(char));
-    sprintf(out, "%f + %fi", creal(*c), cimag(*c));
+    sprintf(out, "%lg %+lgi", creal(c), cimag(c));
     return out;
 }

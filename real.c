@@ -17,7 +17,7 @@ void real_multiply(double *i, double j) {
     *i *= j;
 }
 
-void real_devide(double *i, double j) {
+void real_divide(double *i, double j) {
     *i /= j;
 }
 

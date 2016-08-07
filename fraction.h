@@ -19,10 +19,10 @@ void fraction_subtract(fraction *x, fraction y);
 
 void fraction_multiply(fraction *x, fraction y);
 
-void fraction_devide(fraction *x, fraction y);
+void fraction_divide(fraction *x, fraction y);
 
 void fraction_power(fraction *f, double power);
 
-char *fraction_string(fraction *f);
+char *fraction_string(fraction f);
 
 #endif //SCIENTIFIC_CALCULATOR_FRACTION_H

@@ -6,7 +6,6 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "fraction.h"
 
 fraction fraction_constructor(double numerator, double denominator) {
@@ -35,7 +34,7 @@ void fraction_multiply(fraction *x, fraction y) {
     x->denominator *= y.denominator;
 }
 
-void fraction_devide(fraction *x, fraction y) {
+void fraction_divide(fraction *x, fraction y) {
     x->numerator *= y.denominator;
     x->denominator *= y.numerator;
 }
@@ -45,11 +44,8 @@ void fraction_power(fraction *f, double power) {
     f->denominator = pow(f->denominator, power);
 }
 
-char *fraction_string(fraction *f) {
-    int decimal, sign;
-    char *numerator = ecvt(f->numerator, INT_MAX, &decimal, &sign);
-    char *denominator = ecvt(f->denominator, INT_MAX, &decimal, &sign);
-    char *out = (char *) malloc((strlen(numerator) + strlen(denominator) + 3 + 1) * sizeof(char));
-    sprintf(out, "%s / %s", numerator, denominator);
+char *fraction_string(fraction f) {
+    char *out = (char *) malloc(CHAR_MAX * sizeof(char));
+    sprintf(out, "%lg / %lg", f.numerator, f.denominator);
     return out;
 }

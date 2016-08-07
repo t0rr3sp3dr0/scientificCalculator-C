@@ -28,8 +28,10 @@ void matrix_multiply(matrix *x, matrix y);
 
 int matrix_can_power(matrix m);
 
-void matrix_power(matrix *m, unsigned int power);
+void matrix_power(matrix *m, unsigned long long int power);
 
-void matrix_print(matrix *m);
+void matrix_print(matrix m);
+
+void matrix_destructor(matrix *m);
 
 #endif //SCIENTIFIC_CALCULATOR_MATRIX_H
